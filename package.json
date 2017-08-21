@@ -1,7 +1,7 @@
 {
-  "name": "preact-tinper-bee",
+  "name": "preact-ant",
   "version": "0.0.1",
-  "description": "Preact Tinper bee UI Components",
+  "description": "Preact ant UI Components",
   "main": "lib/index.js",
   "jsnext:main": "lib/index.js",
   "files": [
