@@ -2,6 +2,7 @@
 // import 'isomorphic-fetch';
 import { h, render } from 'preact';
 import './style';
+import '../src/style/index.less';
 
 let root;
 function init() {

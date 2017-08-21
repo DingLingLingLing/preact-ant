@@ -29,6 +29,7 @@ module.exports = {
 		alias: {
 			components: path.resolve(__dirname, "example/components"),    // used for tests
 			style: path.resolve(__dirname, "example/style"),
+			src: path.resolve(__dirname, "src/components"),
 			'react': 'preact-compat',
 			'react-dom': 'preact-compat'
 		}
@@ -38,7 +39,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.jsx?$/,
-				exclude: path.resolve(__dirname, 'example'),
+				exclude: [path.resolve(__dirname, 'example'),path.resolve(__dirname, 'src') ],
 				enforce: 'pre',
 				use: 'source-map-loader'
 			},
@@ -50,7 +51,7 @@ module.exports = {
 			{
 				// Transform our own .(less|css) files with PostCSS and CSS-modules
 				test: /\.(less|css)$/,
-				include: [path.resolve(__dirname, 'example/components')],
+				include: [path.resolve(__dirname, 'example/components'),path.resolve(__dirname, 'src/components')],
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
 					use: [
@@ -75,7 +76,7 @@ module.exports = {
 			},
 			{
 				test: /\.(less|css)$/,
-				exclude: [path.resolve(__dirname, 'example/components')],
+				exclude: [path.resolve(__dirname, 'example/components'), path.resolve(__dirname, 'src/components')],
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
 					use: [

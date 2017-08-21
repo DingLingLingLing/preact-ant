@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import './style.less';
-import Form from '../form';
-import Input from '../input';
+import Form from 'src/form';
+import Input from 'src/input';
 
 export default class Profile extends Component {
 

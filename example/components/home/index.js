@@ -1,7 +1,7 @@
 import {h, Component} from 'preact';
 import './style.less';
-import Flex from '../flex';
-import Button from '../button';
+import Flex from 'src/flex';
+import Button from 'src/button';
 
 export default class Home extends Component {
 	render() {
